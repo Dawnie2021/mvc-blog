@@ -13,11 +13,28 @@ Post.init(
         autoIncrement: true,
       },
 
+      title: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
 
+      content: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+      },
+      userId: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'user',
+            key: 'id',
+      
+      },
 
     sequelize,
     timestamps: false,
-    modelName: 'Post',
-  
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'post',
+}
 });
 module.exports = Post;
