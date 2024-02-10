@@ -19,6 +19,8 @@ const seedDatabase = async () => {
     returning: true,
   });
 
+  const users = await User.findAll({ include: [Post] });
+ 
   process.exit(0);
 };
 

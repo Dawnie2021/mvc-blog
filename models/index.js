@@ -2,21 +2,16 @@ const User = require('./User');
 const Post = require('./Post')
 
 
-User.belongsTo(Post, {
+User.hasMany(Post, {
     foreignKey: "user_id"
    
  
   });
   
   Post.belongsTo(User, {
-    foreignKey: "post_id"
+    foreignKey: "user_id"
   
   });
-  
-  
-  
-
-
 
 
 
