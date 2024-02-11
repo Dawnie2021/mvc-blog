@@ -6,8 +6,13 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
   res.render('login');
 });
+
 
 router.get('/post', (req, res) => {
   res.render('post');
@@ -15,14 +20,12 @@ router.get('/post', (req, res) => {
 
 router.get('/dashboard', async (req, res) => {
   try {
-     const postData = await Post.findAll()
-     const posts = postData.map(post => post.get({ plain:true }))
+    const postData = await Post.findAll()
+    const posts = postData.map(post => post.get({ plain: true }))
     res.render('dashboard', {
-       posts
+      posts
     })
-
-
-  } catch(err) {
+  } catch (err) {
     res.redirect("login")
   }
 });
