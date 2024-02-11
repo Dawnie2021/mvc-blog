@@ -1,16 +1,14 @@
 {{> navbar}}
 <article data-theme="dark">
+  
 <header>
   <h2>Dashboard</h2>
 </header>
 <div>
   {{#each posts}}
-  {{!-- This title should be an anchor tag and should redirect you to the user associated with the user of the post  --}}
-  {{!-- By grabbing the user_id --}}
   <h3>{{title}}</h3>
   <p>{{content}}</p>
-
-  {{/each}}
+{{/each}}
 </div>
 </article>
 {{!-- <article>
