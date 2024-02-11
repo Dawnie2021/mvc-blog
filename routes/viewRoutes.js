@@ -13,8 +13,18 @@ router.get('/post', (req, res) => {
   res.render('post');
 });
 
-router.get('/dashboard', (req, res) => {
-  res.render('dashboard');
+router.get('/dashboard', async (req, res) => {
+  try {
+     const postData = await Post.findAll()
+     const posts = postData.map(post => post.get({ plain:true }))
+    res.render('dashboard', {
+       posts
+    })
+
+
+  } catch(err) {
+    res.redirect("login")
+  }
 });
 
 

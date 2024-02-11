@@ -3,8 +3,17 @@
 <header>
   <h2>Dashboard</h2>
 </header>
+<div>
+  {{#each posts}}
+  {{!-- This title should be an anchor tag and should redirect you to the user associated with the user of the post  --}}
+  {{!-- By grabbing the user_id --}}
+  <h3>{{title}}</h3>
+  <p>{{content}}</p>
 
-<article>
+  {{/each}}
+</div>
+
+{{!-- <article>
   <footer>
     <a href="#" role="button">View</a>
   </footer>
@@ -33,4 +42,4 @@
   <footer>
     <a href="#" role="button" class="secondary outline">Save</a>
   </footer>
-</article>
+</article> --}}
