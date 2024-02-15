@@ -2,11 +2,10 @@
 <article data-theme="dark">
 <header>
   <h2>Login</h2>
-  </header>
-<div>
-  <input id="email" class="input" type="email" placeholder="Email" />
-    <input id="password" class="input" type="password" placeholder="Password"/>
-      <button id="submit">Submit</button>
-  </div>
-
+  <form action="/api/users/login" method="POST">
+  <input type="email" name="email" id="id" />
+  <input type ="password" name="password" id="password" />
+  <button type="Submit"></button>
+  </form>
+</header>
 </article>
