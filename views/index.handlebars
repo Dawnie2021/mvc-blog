@@ -2,40 +2,12 @@
 
 <article data-theme="dark">
 
-<article>
-  <header>
-    <h2>Why is MVC so important?</h2>
-  </header>
-  <p>
-    MVC separates data, interface, and control, making code organized and
-    maintainable.
-  </p>
-</article>
-<article>
-  <header>
-    <h2>What are handlebars?</h2>
-  </header>
-  <p>
-    Handlebars is a templating language for dynamically generating HTML in web
-    development.
-  </p>
-</article>
-<article>
-  <header>
-    <h2>What are helpers?</h2>
-  </header>
-  <p>
-    Helpers are functions that add custom logic to templates for tasks like
-    formatting dates or conditionally displaying content.
-  </p>
-</article>
-<article>
-  <header>
-    <h2>What is sequelize?</h2>
-  </header>
-  <p>
-    Sequelize is a Node.js ORM for simplifying database interactions using
-    JavaScript objects, abstracting away SQL queries.
-  </p>
-</article>
+<header>
+  <h2>Add Post</h2>
+</header>
+
+<form action="/api/post" method="POST">
+<input type="content" name="content" id="content" />
+<button type="submit">Submit</button>
+</form>
 </article>
