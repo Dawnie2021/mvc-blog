@@ -14,21 +14,21 @@ Post.init(
 
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
 
     content: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
-     user_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-     }
+    // user_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true,
+    // }
 
 
-    },
-  
+  },
+
   {
     sequelize,
     timestamps: true,
